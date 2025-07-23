@@ -1,0 +1,110 @@
+{
+  "budgets": [
+    {
+      "type": "bundle",
+      "name": "main",
+      "baseline": "500kb",
+      "warning": "600kb",
+      "error": "800kb"
+    },
+    {
+      "type": "bundle",
+      "name": "vendor",
+      "baseline": "800kb",
+      "warning": "1mb",
+      "error": "1.5mb"
+    },
+    {
+      "type": "bundle",
+      "name": "three",
+      "baseline": "600kb",
+      "warning": "800kb",
+      "error": "1mb"
+    },
+    {
+      "type": "bundle",
+      "name": "gsap",
+      "baseline": "200kb",
+      "warning": "300kb",
+      "error": "400kb"
+    },
+    {
+      "type": "asset",
+      "name": "images",
+      "baseline": "2mb",
+      "warning": "3mb",
+      "error": "5mb"
+    },
+    {
+      "type": "asset",
+      "name": "models",
+      "baseline": "5mb",
+      "warning": "8mb",
+      "error": "10mb"
+    },
+    {
+      "type": "asset",
+      "name": "audio",
+      "baseline": "3mb",
+      "warning": "5mb",
+      "error": "8mb"
+    },
+    {
+      "type": "asset",
+      "name": "fonts",
+      "baseline": "200kb",
+      "warning": "300kb",
+      "error": "500kb"
+    }
+  ],
+  "metrics": {
+    "firstContentfulPaint": {
+      "baseline": "1.5s",
+      "warning": "2s",
+      "error": "3s"
+    },
+    "largestContentfulPaint": {
+      "baseline": "2.5s",
+      "warning": "3s",
+      "error": "4s"
+    },
+    "cumulativeLayoutShift": {
+      "baseline": "0.05",
+      "warning": "0.1",
+      "error": "0.25"
+    },
+    "totalBlockingTime": {
+      "baseline": "200ms",
+      "warning": "300ms",
+      "error": "600ms"
+    },
+    "speedIndex": {
+      "baseline": "2s",
+      "warning": "3s",
+      "error": "4s"
+    }
+  },
+  "optimization": {
+    "codesplitting": {
+      "enabled": true,
+      "strategy": "route-based",
+      "minChunkSize": "20kb",
+      "maxChunks": 30
+    },
+    "treeshaking": {
+      "enabled": true,
+      "sideEffects": false,
+      "unusedExports": true
+    },
+    "compression": {
+      "gzip": true,
+      "brotli": true,
+      "level": 9
+    },
+    "caching": {
+      "staticAssets": "1y",
+      "dynamicContent": "1h",
+      "api": "5m"
+    }
+  }
+}

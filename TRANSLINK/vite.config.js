@@ -37,15 +37,40 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: true,
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       input: {
         main: path.resolve(process.cwd(), 'index.html')
       },
       output: {
+        chunkFileNames: (chunkInfo) => {
+          const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop().replace('.js', '') : 'chunk';
+          return `assets/js/[name]-[hash].js`;
+        },
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
+            return `assets/images/[name]-[hash][extname]`;
+          }
+          if (/woff2?|eot|ttf|otf/i.test(ext)) {
+            return `assets/fonts/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        },
         manualChunks: {
           'three': ['three'],
           'gsap': ['gsap'],
-          'vendor': ['lenis', '@unseenco/taxi', 'TagCloud']
+          'vendor': ['lenis', '@unseenco/taxi', 'TagCloud'],
+          'webgl-core': [
+            'three/examples/jsm/loaders/GLTFLoader.js',
+            'three/examples/jsm/loaders/DRACOLoader.js',
+            'three/examples/jsm/loaders/RGBELoader.js'
+          ],
+          'webgl-controls': [
+            'three/examples/jsm/controls/OrbitControls.js'
+          ]
         }
       }
     }
