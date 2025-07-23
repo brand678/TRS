@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="default">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translink Earbuds - Premium Audio Experience</title>
+    <meta name="description" content="Experience the future of audio with Translink Earbuds. Premium sound quality, advanced features, and cutting-edge design.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/images/webclip.png">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/assets/fonts/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/AzeretMono-Light.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <!-- Theme CSS Variables -->
+    <style>
+        :root {
+            /* Default theme colors - will be overridden by theme system */
+            --color-background: #050D15;
+            --color-text: #ffffff;
+            --color-brand: #050D15;
+            --color-accent: #41a5ff;
+            --color-highlight: #8affff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader">
+            <div class="loader__content">
+                <div class="loader__circles">
+                    <div class="loader__circle"></div>
+                    <div class="loader__circle"></div>
+                    <div class="loader__circle"></div>
+                </div>
+                <div class="loader__text">Loading Experience...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="app" class="app">
+        <!-- WebGL Canvas -->
+        <div class="canvas-wrapper">
+            <canvas class="webgl-canvas" data-webgl-canvas></canvas>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navigation" data-module="navigation">
+            <div class="navigation__content">
+                <div class="navigation__logo">
+                    <a href="/" class="logo">Translink</a>
+                </div>
+                <div class="navigation__menu">
+                    <button class="menu-toggle" data-menu-toggle>
+                        <span class="menu-toggle__line"></span>
+                        <span class="menu-toggle__line"></span>
+                        <span class="menu-toggle__line"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content" data-router-wrapper>
+            <!-- Content will be loaded here -->
+        </main>
+
+        <!-- Audio Controls -->
+        <div class="audio-controls">
+            <button class="audio-toggle" data-module="audio-toggle">
+                <span class="audio-toggle__icon"></span>
+            </button>
+        </div>
+
+        <!-- Theme Settings Access -->
+        <div class="settings-access">
+            <a href="/settings" class="settings-link" title="Theme Settings">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Application Scripts -->
+    <script type="module" src="/src/core/app.js"></script>
+</body>
+</html>
