@@ -1,0 +1,41 @@
+{
+    "name":  "translink-3d-app",
+    "version":  "1.0.0",
+    "description":  "A powerful web experience for the Translink 1 Earbuds, by OFF+BRAND",
+    "type":  "module",
+    "main":  "src/js/app.js",
+    "scripts":  {
+                    "dev":  "vite --host",
+                    "build":  "vite build",
+                    "preview":  "vite preview",
+                    "type-check":  "tsc --noEmit"
+                },
+    "dependencies":  {
+                         "gsap":  "^3.12.7",
+                         "@unseenco/taxi":  "^1.8.0",
+                         "TagCloud":  "^2.5.0",
+                         "lenis":  "^1.2.3",
+                         "stats-gl":  "^3.6.0",
+                         "three":  "^0.175.0"
+                     },
+    "devDependencies":  {
+                            "@types/three":  "^0.175.0",
+                            "typescript":  "^5.0.0",
+                            "vite":  "^5.0.0"
+                        },
+    "keywords":  [
+                     "3d",
+                     "webgl",
+                     "three.js",
+                     "gsap",
+                     "earbuds",
+                     "interactive"
+                 ],
+    "author":  "OFF+BRAND",
+    "license":  "MIT",
+    "engines":  {
+                    "node":  "\u003e=18.0.0",
+                    "pnpm":  "\u003e=8.0.0"
+                },
+    "packageManager":  "pnpm@8.15.0"
+}

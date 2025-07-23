@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/app": ["./src/js/app.js"],
+      "@/gsap": ["./src/js/gsap.ts"],
+      "@/scroll": ["./src/js/scroll.ts"],
+      "@/gl/Gl": ["./src/js/gl/Gl.js"],
+      "@/gl/*": ["./src/js/gl/*"],
+      "@/modules/*": ["./src/js/modules/*"],
+      "@/utils/*": ["./src/js/utils/*"],
+      "@/transitions/*": ["./src/js/transitions/*"],
+      "@/utils/subscribable": ["./src/js/utils/subscribable.ts"],
+      "@/utils/environment": ["./src/js/utils/environment.ts"],
+      "@/utils/client-rect": ["./src/js/utils/client-rect.ts"]
+    },
+    "types": ["three"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.tsx",
+    "src/**/*.jsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "Project-Resources"
+  ]
+}
